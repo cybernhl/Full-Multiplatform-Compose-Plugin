@@ -135,7 +135,7 @@ class BuilderWizardBuilder : StarterModuleBuilder() {
     }
 
     override fun getTemplateProperties(): Map<String, Any> {
-        val versions = runBlocking { network.getVersions(params.remoteVersions) }
+        val versions = runBlocking { network.getVersions(params.remoteVersions) }//FIXME
         val sanitizedPackageName = sanitizePackage(starterContext.artifact)
         return mapOf(
             PACKAGE_NAME to starterContext.group,

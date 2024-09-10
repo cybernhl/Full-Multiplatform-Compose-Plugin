@@ -1,22 +1,23 @@
 plugins {
-    id("org.jetbrains.compose")
     id("com.android.application")
     kotlin("android")
+    id("org.jetbrains.compose")
+    alias(libs.plugins.compose.compiler)
 }
 
 group = "${PACKAGE_NAME}"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
-}
 
 android {
     compileSdk = 34
+    namespace = "${PACKAGE_NAME}.${LAST_PACKAGE_NAME}"
+    buildFeatures {
+            compose = true
+    }
     defaultConfig {
         applicationId = "${PACKAGE_NAME}.${LAST_PACKAGE_NAME}"
         minSdk = ${MINSDK}
-            targetSdk = 34
         versionCode = 1
         versionName = "1.0-SNAPSHOT"
     }

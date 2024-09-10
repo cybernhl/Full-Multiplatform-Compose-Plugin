@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.programmersbox"
-version = "1.0.28"
+version = "1.0.29"
 
 repositories {
     mavenCentral()
@@ -42,7 +42,7 @@ dependencies {
     implementation(compose.desktop.windows_x64)
     implementation(compose.desktop.common)
     implementation(compose.materialIconsExtended)
-    val ktorVersion = "2.3.7"
+    val ktorVersion = "2.3.12"
     implementation("io.ktor:ktor-client-cio-jvm:$ktorVersion")
     implementation("io.ktor:ktor-client-core:$ktorVersion")
     implementation("io.ktor:ktor-client-cio:$ktorVersion")
@@ -66,7 +66,7 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("221")
-        untilBuild.set("241.*")
+        untilBuild.set("245.*")
     }
 
     signPlugin {

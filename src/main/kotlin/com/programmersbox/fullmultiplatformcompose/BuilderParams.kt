@@ -10,7 +10,7 @@ class BuilderParams {
     var hasiOS: Boolean by mutableStateOf(false)
     var hasDesktop: Boolean by mutableStateOf(false)
 
-    var packageName by mutableStateOf("com.example")
+    var packageName by mutableStateOf("idv.neo.compose")
     var sharedName by mutableStateOf("common")
 
     val android = Android()
@@ -28,7 +28,7 @@ class Android {
 }
 
 class IOS {
-    var appName: String by mutableStateOf("My Application")
+    var appName: String by mutableStateOf("CMP_With_KMP App")
 }
 
 class Compose {
